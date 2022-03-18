@@ -5,6 +5,13 @@
 `jekyll_context_inspector` is a Jekyll tag plugin that displays lots of information from context for websites in development mode if `context_inspector: true` in `_config.yml`.
 
 
+## Usage
+
+```html
+<p>{% context_inspector %}</p>
+```
+
+
 ## Installation
 
 Add this line to your application's Gemfile:
