@@ -10,6 +10,7 @@
 ```html
 <p>{% context_inspector %}</p>
 ```
+Output is also displayed on the console.
 
 
 ## Installation
