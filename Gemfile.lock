@@ -2,7 +2,7 @@ PATH
   remote: .
   specs:
     jekyll_context_inspector (1.0.0)
-      jekyll
+      jekyll (>= 3.5.0)
       jekyll_plugin_logger
 
 GEM
@@ -132,4 +132,4 @@ DEPENDENCIES
   ruby-debug-ide
 
 BUNDLED WITH
-   2.3.8
+   2.3.7

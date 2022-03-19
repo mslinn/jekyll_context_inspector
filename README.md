@@ -13,12 +13,19 @@
 Output is also displayed on the console.
 
 
+## Additional Information
+More information is available on
+[Mike Slinn&rsquo;s website](https://www.mslinn.com/blog/2020/10/03/jekyll-plugins.html).
+
+
 ## Installation
 
-Add this line to your application's Gemfile:
+Add this line to your application's Gemfile, within the `jekyll_plugins` group:
 
 ```ruby
-gem 'jekyll_context_inspector'
+group :jekyll_plugins do
+  gem 'jekyll_context_inspector'
+end
 ```
 
 And then execute:
@@ -30,26 +37,28 @@ Or install it yourself as:
     $ gem install jekyll_context_inspector
 
 
-## Additional Information
-More information is available on
-[Mike Slinn&rsquo;s website](https://www.mslinn.com/blog/2020/10/03/jekyll-plugins.html).
-
-
 ## Development
 
-After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+After checking out the repo, run `bin/setup` to install dependencies.
 
-Install development dependencies like this:
-```
-$ BUNDLE_WITH="development" bundle install
-```
+You can also run `bin/console` for an interactive prompt that will allow you to experiment.
 
+
+### Build and Install Locally
 To build and install this gem onto your local machine, run:
+```shell
+$ rake install:local
+```
+
+The following also does the same thing:
 ```shell
 $ bundle exec rake install
 jekyll_context_inspector 1.0.0 built to pkg/jekyll_context_inspector-0.1.0.gem.
 jekyll_context_inspector (1.0.0) installed.
+```
 
+Examine the newly built gem:
+```shell
 $ gem info jekyll_context_inspector
 
 *** LOCAL GEMS ***
@@ -64,6 +73,8 @@ jekyll_context_inspector (1.0.0)
     Generates Jekyll logger with colored output.
 ```
 
+
+### Build and Push to RubyGems
 To release a new version,
   1. Update the version number in `version.rb`.
   2. Commit all changes to git; if you don't the next step might fail with an unexplainable error message.
@@ -77,7 +88,10 @@ To release a new version,
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/mslinn/jekyll_context_inspector.
+1. Fork the project
+2. Create a descriptively named feature branch
+3. Add your feature
+4. Submit a pull request
 
 
 ## License
