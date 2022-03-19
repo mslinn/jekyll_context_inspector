@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 require "jekyll"
-require_relative "jekyll_context_inspector/version"
 require "jekyll_plugin_logger"
+require_relative "jekyll_context_inspector/version"
 
 module Jekyll
   class ContextInspector < Liquid::Tag
@@ -34,5 +34,5 @@ module Jekyll
   end
 
   Liquid::Template.register_tag("context_inspector", ContextInspector)
-  info "Loaded jekyll_context_inspector plugin."
+  info { "Loaded jekyll_context_inspector plugin." }
 end
