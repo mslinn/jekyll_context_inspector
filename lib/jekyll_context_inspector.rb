@@ -2,6 +2,7 @@
 
 require "jekyll"
 require "jekyll_plugin_logger"
+require_relative "jekyll_context_inspector/version"
 
 module Jekyll
   PLUGIN_NAME = "context_inspector"
@@ -40,5 +41,5 @@ module Jekyll
   end
 
   Liquid::Template.register_tag(PLUGIN_NAME, ContextInspector)
-  info { "Loaded #{PLUGIN_NAME} plugin." }
+  info { "Loaded #{PLUGIN_NAME} v#{JekyllContextInspector::VERSION} plugin." }
 end
