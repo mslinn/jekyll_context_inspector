@@ -25,6 +25,7 @@ Gem::Specification.new do |spec|
 
   spec.authors = ["Mike Slinn"]
   spec.bindir = "exe"
+  spec.description = "Provides a Jekyll tag plugin that displays lots of information from context for websites in development mode."
   spec.email = ["mslinn@mslinn.com"]
   spec.executables = GemSpecHelper.spec_executables(files)
   spec.files = files
@@ -47,8 +48,6 @@ Gem::Specification.new do |spec|
   spec.required_ruby_version = ">= 2.6.0"
   spec.summary = "Provides a Jekyll tag plugin that displays lots of information from context for websites in development mode."
   spec.version = JekyllContextInspector::VERSION
-
-  spec.executables = spec.files.grep(%r!\Aexe/!) { |f| File.basename(f) }
 
   spec.add_dependency "jekyll", ">= 3.5.0"
   spec.add_dependency "jekyll_plugin_logger"
