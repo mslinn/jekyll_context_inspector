@@ -25,7 +25,9 @@ Gem::Specification.new do |spec|
 
   spec.authors = ["Mike Slinn"]
   spec.bindir = "exe"
-  spec.description = "Provides a Jekyll tag plugin that displays lots of information from context for websites in development mode."
+  spec.description = <<~END_OF_DESC
+    Provides a Jekyll tag plugin that displays lots of information from context for websites in development mode.
+  END_OF_DESC
   spec.email = ["mslinn@mslinn.com"]
   spec.executables = GemSpecHelper.spec_executables(files)
   spec.files = files
