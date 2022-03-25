@@ -10,6 +10,7 @@ end
 
 class ContextInspector < Liquid::Tag
   def render(context)
+    @logger = PluginMetaLogger.instance.new_logger(self)
     site = context.registers[:site]
     inspector_enabled = site.config["context_inspector"]
     return if inspector_enabled.nil? || !inspector_enabled
