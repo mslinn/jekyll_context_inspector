@@ -1,17 +1,49 @@
-require: rubocop-jekyll
-inherit_gem:
- rubocop-jekyll: .rubocop.yml
+require:
+ - rubocop-rake
+ - rubocop-rspec
 
 AllCops:
   Exclude:
-      - vendor/**/*
-      - Gemfile*
-      - '*.gemspec' # This does nothing. Why?
+    - exe/**/*
+    - vendor/**/*
+    - Gemfile*
   NewCops: enable
   TargetRubyVersion: 2.6
+
+Gemspec/DeprecatedAttributeAssignment:
+  Enabled: false
+
+Gemspec/RequireMFA:
+  Enabled: false
+
+Layout/HashAlignment:
+  EnforcedColonStyle: table
+  EnforcedHashRocketStyle: table
 
 Layout/LineLength:
   Max: 150
 
-# Gemspec/RequireMFA:
-#   enable: false
+Metrics/BlockLength:
+  Exclude:
+    - jekyll_content_inspector.gemspec
+  Max: 40
+
+Metrics/MethodLength:
+  Max: 30
+
+Naming/FileName:
+  Exclude:
+    - Rakefile
+
+Style/Documentation:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/TrailingCommaInHashLiteral:
+  EnforcedStyleForMultiline: comma
+
+RSpec/FilePath:
+  IgnoreMethods: true
+  SpecSuffixOnly: true
