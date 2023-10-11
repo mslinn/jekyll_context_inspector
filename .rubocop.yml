@@ -35,6 +35,16 @@ Naming/FileName:
   Exclude:
     - Rakefile
 
+RSpec/VerifiedDoubleReference:
+  Enabled: false
+
+RSpec/FilePath:
+  IgnoreMethods: true
+  SpecSuffixOnly: true
+
+RSpec/NoExpectationExample:
+  Enabled: false
+
 Style/Documentation:
   Enabled: false
 
@@ -43,7 +53,3 @@ Style/FrozenStringLiteralComment:
 
 Style/TrailingCommaInHashLiteral:
   EnforcedStyleForMultiline: comma
-
-RSpec/FilePath:
-  IgnoreMethods: true
-  SpecSuffixOnly: true

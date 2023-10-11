@@ -1,6 +1,4 @@
-`jekyll_context_inspector`
-[![Gem Version](https://badge.fury.io/rb/jekyll_context_inspector.svg)](https://badge.fury.io/rb/jekyll_context_inspector)
-===========
+# `jekyll_context_inspector` [![Gem Version](https://badge.fury.io/rb/jekyll_context_inspector.svg)](https://badge.fury.io/rb/jekyll_context_inspector)
 
 `jekyll_context_inspector` is a Jekyll tag plugin that displays lots of information from context for websites in development mode if `context_inspector: true` in `_config.yml`.
 
@@ -10,10 +8,12 @@
 ```html
 <p>{% context_inspector %}</p>
 ```
+
 Output is also displayed on the console.
 
 
 ## Additional Information
+
 More information is available on
 [Mike Slinn&rsquo;s website](https://www.mslinn.com/blog/2020/10/03/jekyll-plugins.html).
 
@@ -30,11 +30,9 @@ end
 
 And then execute:
 
-    $ bundle install
-
-Or install it yourself as:
-
-    $ gem install jekyll_context_inspector
+```shell
+$ bundle
+```
 
 
 ## Development
@@ -45,12 +43,9 @@ You can also run `bin/console` for an interactive prompt that will allow you to 
 
 
 ### Build and Install Locally
-To build and install this gem onto your local machine, run:
-```shell
-$ rake install:local
-```
 
-The following also does the same thing:
+To build and install this gem onto your local machine, run:
+
 ```shell
 $ bundle exec rake install
 jekyll_context_inspector 1.0.0 built to pkg/jekyll_context_inspector-0.1.0.gem.
@@ -58,6 +53,7 @@ jekyll_context_inspector (1.0.0) installed.
 ```
 
 Examine the newly built gem:
+
 ```shell
 $ gem info jekyll_context_inspector
 
@@ -75,13 +71,17 @@ jekyll_context_inspector (1.0.0)
 
 
 ### Build and Push to RubyGems
+
 To release a new version,
+
   1. Update the version number in `version.rb`.
   2. Commit all changes to git; if you don't the next step might fail with an unexplainable error message.
   3. Run the following:
+
      ```shell
      $ bundle exec rake release
      ```
+
      The above creates a git tag for the version, commits the created tag,
      and pushes the new `.gem` file to [RubyGems.org](https://rubygems.org).
 

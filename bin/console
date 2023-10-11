@@ -1,8 +1,8 @@
 #!/usr/bin/env ruby
 
 require 'bundler/setup'
-require 'liquid'
-require 'jekyll_context_inspector'
 require 'irb'
+require 'jekyll_context_inspector'
+require 'liquid'
 
 IRB.start(__FILE__)
