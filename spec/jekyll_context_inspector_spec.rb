@@ -11,7 +11,7 @@ RSpec.describe(Jekyll) do
     context_
   end
 
-  it 'is created properly' do
+  it 'is created properly', skip: 'just a placeholder' do
     # expect(output).to eq('asdf')
   end
 end

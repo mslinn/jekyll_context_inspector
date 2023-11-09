@@ -1,6 +1,7 @@
 # `jekyll_context_inspector` [![Gem Version](https://badge.fury.io/rb/jekyll_context_inspector.svg)](https://badge.fury.io/rb/jekyll_context_inspector)
 
-`jekyll_context_inspector` is a Jekyll tag plugin that displays lots of information from context for websites in development mode if `context_inspector: true` in `_config.yml`.
+`jekyll_context_inspector` is a Jekyll tag plugin that displays lots of information from context for
+websites in development mode if `context_inspector: true` in `_config.yml`.
 
 
 ## Usage
