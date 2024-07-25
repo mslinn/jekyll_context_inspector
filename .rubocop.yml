@@ -1,10 +1,14 @@
 require:
- - rubocop-rake
- - rubocop-rspec
+  # - rubocop-jekyll
+  - rubocop-md
+  - rubocop-performance
+  - rubocop-rake
+  - rubocop-rspec
 
 AllCops:
   Exclude:
     - binstub/**/*
+    - demo/_site/*
     - vendor/**/*
     - Gemfile*
   NewCops: enable
@@ -25,32 +29,54 @@ Layout/HashAlignment:
 Layout/LineLength:
   Max: 150
 
+Metrics/AbcSize:
+  Max: 55
+
 Metrics/BlockLength:
   Exclude:
-    - jekyll_content_inspector.gemspec
-  Max: 40
+    - jekyll_plugin_support.gemspec
+  Max: 30
+
+Metrics/CyclomaticComplexity:
+  Max: 25
 
 Metrics/MethodLength:
-  Max: 30
+  Max: 50
+
+Metrics/PerceivedComplexity:
+  Max: 25
 
 Naming/FileName:
   Exclude:
     - Rakefile
+    - "*.md"
 
-RSpec/VerifiedDoubleReference:
+RSpec/ExampleLength:
+  Max: 30
+
+RSpec/SpecFilePathFormat:
+  Enabled: false
+  IgnoreMethods: true
+
+RSpec/SpecFilePathSuffix:
   Enabled: false
 
-RSpec/FilePath:
-  IgnoreMethods: true
-  SpecSuffixOnly: true
+RSpec/IndexedLet:
+  Enabled: false
 
-RSpec/NoExpectationExample:
+RSpec/MultipleExpectations:
+  Max: 15
+
+Style/ClassVars:
   Enabled: false
 
 Style/Documentation:
   Enabled: false
 
 Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/StringConcatenation:
   Enabled: false
 
 Style/TrailingCommaInHashLiteral:
